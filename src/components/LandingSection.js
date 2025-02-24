@@ -17,12 +17,6 @@ const LandingSection = () => (
  > 
    <VStack spacing={16}> 
      <VStack spacing={4} alignItems="center"> 
-     <Image 
-         src={'vCardQRCode.png'} 
-         size="md"
-         height="256px"
-         name="Your Name" 
-       /> 
        <Avatar 
          src="https://i.pravatar.cc/150?img=69" 
          size="2xl" 
