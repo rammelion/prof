@@ -1,27 +1,22 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import Header from "./components/Header";
-import LandingSection from "./components/LandingSection";
-import ProjectsSection from "./components/ProjectsSection";
-import ContactMeSection from "./components/ContactMeSection";
-import Footer from "./components/Footer";
-import { AlertProvider } from "./context/alertContext";
-import Alert from "./components/Alert";
+import { Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Home from './components/pages/Home';
+import MemoryGames from './components/pages/MemoryGames';
+import './App.css';
 
 function App() {
- return (
-   <ChakraProvider>
-     <AlertProvider>
-       <main>
-
-         <LandingSection />
-
-
-         <Footer />
-         <Alert />
-       </main>
-     </AlertProvider>
-   </ChakraProvider>
- );
+  return (
+    <>
+        <nav>
+            <Link to='/' className='nav-item'>Home</Link>
+            <Link to='/memorygame' className='nav-item'>Memory Games</Link>
+        </nav>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/memorygame' element={<MemoryGames />} />
+        </Routes>
+    </>
+  );
 }
 
 export default App;
