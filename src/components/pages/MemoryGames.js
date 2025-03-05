@@ -53,7 +53,7 @@ const cards = fisherYatesShuffle(addCards(12));
         <div className="card-container">
             {
                 cards.map((card) => (
-                    <div id={card.id} data-id={card.data} className="card-down" key={card.id} onClick={handleClick(card.id)}>
+                    <div id={card.id} data-id={card.data} className="card-up" key={card.id} onClick={handleClick(card.id)}>
 
                         <p>
                             {card.value}

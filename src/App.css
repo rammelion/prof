@@ -84,8 +84,19 @@
 }
 
 .card-down {
-    position: relative;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1.5;
     cursor: pointer;
     background-image: url('https://prof.rammelion.hu/card.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:transparent;
+}
+
+.card-up {
+    aspect-ratio: 1/1.5;
+    cursor: pointer;
+    background-image: url('https://prof.rammelion.hu/card-up.jpg');
+    background-repeat: no-repeat;
+    color:black;
+    margin:auto;
 }
