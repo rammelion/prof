@@ -83,9 +83,9 @@
     margin: 5rem auto 0 auto;
 }
 
-.card {
+.card-down {
     position: relative;
     aspect-ratio: 1/1;
     cursor: pointer;
-    background-color: #fffbe4;
+    background-image: url('https://prof.rammelion.hu/card.jpg');
 }

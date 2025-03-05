@@ -1,6 +1,11 @@
 export default function MemoryGames() {
     // Given array
 
+    function handleClick(id) {
+        let card = document.getElementById(id);
+        /*data = card.getAttribute('data-id');
+        card.innerText = data;*/
+    }
 
 function addCards(num) {
 
@@ -10,11 +15,13 @@ for (let i=0; i < num; i++) {
     let ranA = Math.floor(Math.random() * 90 + 10);
     let ranB = Math.floor(Math.random() * 90 + 10);
     array.push({
-        'id': String(i) + 'A',
+        'id': String(i).padStart(3,0) + 'A',
+        'data' : String(i).padStart(3,0),
         'value' : String(ranA) + ' + ' + String(ranB),
     });
     array.push({
-        'id': String(i) + 'B',
+        'id': String(i).padStart(3,0) + 'B',
+        'data' : String(i).padStart(3,0),
         'value': String(ranA + ranB),
     });
 }
@@ -38,7 +45,7 @@ function fisherYatesShuffle(array) {
 }
 
 // Get the shuffled array from the function
-const cards = fisherYatesShuffle(addCards(6));
+const cards = fisherYatesShuffle(addCards(12));
 
 
 
@@ -46,7 +53,7 @@ const cards = fisherYatesShuffle(addCards(6));
         <div className="card-container">
             {
                 cards.map((card) => (
-                    <div id={card.id} className="card" key={card.id}>
+                    <div id={card.id} data-id={card.data} className="card-down" key={card.id} onClick={handleClick(card.id)}>
 
                         <p>
                             {card.value}
