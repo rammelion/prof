@@ -74,8 +74,6 @@
 
 .card-container {
     max-width: 50vW;
-    border-radius: 5px;
-    border: 1px solid;
     display: grid;
     grid-gap: 4px;
     grid-template-columns: repeat(4, 1fr);
@@ -86,6 +84,7 @@
 .card-down {
     aspect-ratio: 1/1.5;
     cursor: pointer;
+    margin:10px;
     background-image: url('https://prof.rammelion.hu/card.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,8 +94,13 @@
 .card-up {
     aspect-ratio: 1/1.5;
     cursor: pointer;
+    margin:10px;
+    border: 1px solid #09529F;
+    border-radius: 5px;
     background-image: url('https://prof.rammelion.hu/card-up.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    line-height: 220px;
     color:black;
-    margin:auto;
 }
